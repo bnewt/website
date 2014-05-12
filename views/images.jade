@@ -1,0 +1,4 @@
+div(style="height:400px")
+    div(carousel="" interval="carouselInterval" disable-animation="true")
+        div(slide="" ng-repeat="slide in slides" active="slide.active")
+            img(ng-src="{{slide.image}}" style="margin:auto;")

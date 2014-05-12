@@ -1,0 +1,5 @@
+.row(ng-repeat='testimonial in testimonials')
+    .well.col-md-offset-3.col-md-6
+        p.row.text-left(ng-bind='testimonial.text')
+        .row(ng-bind='testimonial.name')
+        .row(ng-bind='testimonial.city' ng-if='testimonial.city')
