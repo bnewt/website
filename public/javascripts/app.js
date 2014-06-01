@@ -44,6 +44,23 @@ config(['$routeProvider',
             redirectTo: '/home'
         });
 }])
+.directive('lazyLoad', ['$timeout',
+        function($timeout) {
+            return {
+                restrict: 'C',
+                link: function (scope, elm) {
+                    $timeout(function() {
+                        elm.lazyload({
+                            effect          : 'fadeIn',
+                            effectspeed     : 500,
+                            'skip_invisible': false
+                        });
+                    }, 0);
+                }
+        
+            }
+        }
+])
 .directive('disableAnimation', ['$animate',
         function($animate){
             return {
@@ -53,6 +70,7 @@ config(['$routeProvider',
                         $animate.enabled(!value, $element);
                     });
                 }
+            }
         }
-}]);
+]);
 

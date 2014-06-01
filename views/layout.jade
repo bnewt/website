@@ -6,8 +6,9 @@ html(ng-app='bolte-construction')
     meta(name='description' content='Website for Bolte Construction - Omaha, NE')
     meta(name='author' content='Brian Newton')
     title= 'Bolte Construction'
-    link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet' href='/components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet' href='/stylesheets/carousel.css')
+    link(rel='stylesheet' href='/stylesheets/site.css')
   body
     .navbar-wrapper
         .container
@@ -36,11 +37,16 @@ html(ng-app='bolte-construction')
 
         block content
 
-        footer
-            p!= 'Bolte Construction &bull; Omaha Nebraska &bull; 402-706-0660 &bull; Email &bull; &copy; Bolte Construction 2014'
-    script(type='text/javascript' src='javascripts/angular.min.js')
-    script(type='text/javascript' src='javascripts/angular-route.min.js')
-    script(type='text/javascript' src='javascripts/angular-animate.min.js')
-    script(type='text/javascript' src='javascripts/ui-bootstrap-tpls-0.10.0.min.js')
+    
+    footer
+        .container
+            hr
+            h4!= 'Bolte Construction &bull; Omaha Nebraska &bull; 402-706-0660 &bull; Email &bull; &copy; Bolte Construction 2014'
+    script(type='text/javascript' src='components/jquery/dist/jquery.min.js')
+    script(type='text/javascript' src='components/jquery.lazyload/jquery.lazyload.min.js')
+    script(type='text/javascript' src='components/angular/angular.min.js')
+    script(type='text/javascript' src='components/angular-route/angular-route.min.js')
+    script(type='text/javascript' src='components/angular-animate/angular-animate.min.js')
+    script(type='text/javascript' src='components/angular-bootstrap/ui-bootstrap-tpls.min.js')
     script(type='text/javascript' src='javascripts/app.js')
     script(type='text/javascript' src='javascripts/controllers.js')
